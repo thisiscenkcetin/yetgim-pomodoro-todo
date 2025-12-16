@@ -8,17 +8,27 @@
 
 ---
 
-## 📋 Proje Açıklaması
+## Proje Açıklaması
 
 Modern web teknolojileri ile inşa edilmiş, tamamen işlevsel bir Pomodoro zamanlayıcı ve kalıcı görev listesi uygulaması. 
 
 **Teknoloji Yığını:** Streamlit • SQLAlchemy • SQLite • Python • CSS3 • Docker
 
+## Demo
+
+![Demo](https://github.com/thisiscenkcetin/yetgim-pomodoro-todo/blob/main/demo.png?raw=true) 
+
+![Demo](https://github.com/thisiscenkcetin/yetgim-pomodoro-todo/blob/main/demo2.png?raw=true) 
+
+![Demo](https://github.com/thisiscenkcetin/yetgim-pomodoro-todo/blob/main/demo3.png?raw=true) 
+
+![Demo](https://github.com/thisiscenkcetin/yetgim-pomodoro-todo/blob/main/demo4.png?raw=true) 
+
 ---
 
-## 💡 Teknik Uygulama Detayları
+## Teknik Uygulama Detayları
 
-### 🗄️ Veritabanı Modelleri (SQLAlchemy ORM)
+### Veritabanı Modelleri (SQLAlchemy ORM)
 
 ```python
 # models.py - SQLAlchemy ile tanımlanmış ORM modelleri
@@ -48,13 +58,13 @@ class PomodoroSession(Base):
 ```
 
 **Öne Çıkan Özellikler:**
-- ✅ İlişkisel veri bütünlüğü ve otomatik migration desteği
-- ✅ Tarih-tabanlı raporlama için indexed columns
-- ✅ Soft-delete pattern desteği (abandoned sessions)
+- İlişkisel veri bütünlüğü ve otomatik migration desteği
+- Tarih-tabanlı raporlama için indexed columns
+- Soft-delete pattern desteği (abandoned sessions)
 
 ---
 
-### ⚙️ State Management & Timer Persistensi
+### State Management & Timer Persistensi
 
 ```python
 # app.py - Streamlit Session State Yapılandırması
@@ -79,13 +89,13 @@ if 'show_report_modal' not in st.session_state:
 ```
 
 **Mimari Avantajlar:**
-- 🔄 Streamlit rerender sırasında timer durumunu korur
-- 🗂️ Multilevel state tracking (mode, timing, session management)
-- 💾 Veritabanında oturum persistence ile frontend state senkronizasyonu
+- Streamlit rerender sırasında timer durumunu korur
+- Multilevel state tracking (mode, timing, session management)
+- Veritabanında oturum persistence ile frontend state senkronizasyonu
 
 ---
 
-### ⏱️ Timer Mantığı & Oturum Kaydı
+### Timer Mantığı & Oturum Kaydı
 
 ```python
 # app.py - Timer döngüsü ve veritabanı entegrasyonu
@@ -118,13 +128,13 @@ if st.session_state.timer_running:
 ```
 
 **Teknik Detaylar:**
-- ⏰ 1 saniyelik uyku ile smooth timer güncellemesi
-- 📊 Gerçek süre hesaplaması (planlanan vs. gerçek)
-- 🎯 Veritabanı senkronizasyonu tamamlanmada
+- 1 saniyelik uyku ile smooth timer güncellemesi
+- Gerçek süre hesaplaması (planlanan vs. gerçek)
+- Veritabanı senkronizasyonu tamamlanmada
 
 ---
 
-### 📈 İstatistik Hesaplamaları & Raporlama
+### İstatistik Hesaplamaları & Raporlama
 
 ```python
 # app.py - Gelişmiş query ve analitik hesaplamalar
@@ -174,14 +184,14 @@ for date_tuple in all_dates:
 ```
 
 **Sorgu Özellikleri:**
-- 🎯 Index kullanan optimal filtering
-- 📊 Dinamik agregasyon (SUM, COUNT, DISTINCT)
-- 🔄 Tarih-tabanlı periyodik analiz
-- 🏆 Motivasyon metrikleri (streak tracking)
+- Index kullanan optimal filtering
+- Dinamik agregasyon (SUM, COUNT, DISTINCT)
+- Tarih-tabanlı periyodik analiz
+- Motivasyon metrikleri (streak tracking)
 
 ---
 
-### ✅ Görev Yönetimi & Dinamik UI
+### Görev Yönetimi & Dinamik UI
 
 ```python
 # app.py - CRUD operasyonları ve interaktif görev listesi
@@ -220,7 +230,7 @@ for task in tasks:
 ```
 
 
-## 🚀 Hızlı Başlangıç
+## Hızlı Başlangıç
 
 ### Seçenek 1: Docker ile (Önerilen)
 
@@ -258,7 +268,7 @@ Tarayıcı otomatik olarak `http://localhost:8501` adresinde açılır.
 
 ---
 
-## 📊 Özellikler
+## Özellikler
 
 ✨ **Pomodoro Zamanlayıcı**
 - 25 dakika çalışma, 5 dakika kısa mola, 15 dakika kahve molası
@@ -280,7 +290,7 @@ Tarayıcı otomatik olarak `http://localhost:8501` adresinde açılır.
 
 ---
 
-## 🏗️ Proje Yapısı
+## Proje Yapısı
 
 ```
 yetgim-pomodoro-todo/
@@ -305,28 +315,9 @@ Tüm bağımlılıklar `requirements.txt` dosyasında listelenir.
 
 ---
 
-## 👨‍💻 Geliştirici Bilgileri
-
 **Geliştirici:** Cenk Çetin  
 **Email:** dev.cenkcetin@gmail.com  
-**GitHub:** [github.com/yourusername](https://github.com/yourusername)
-
----
 
 ## 📄 Lisans
 
 Bu proje MIT Lisansı altında lisanslanmıştır.
-
----
-
-## 🤝 Katkı Yönergeleri
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişiklikleri commit edin (`git commit -m 'Add amazing feature'`)
-4. Branch'i push edin (`git push origin feature/amazing-feature`)
-5. Pull Request açın
-
----
-
-**Keyifli Çalışmalar! 🍅✨**
